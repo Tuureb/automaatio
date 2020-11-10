@@ -43,12 +43,12 @@ function addDocument(onAdded){
 }
 
 function createConnection(onCreate){
-    MongoClient.connect('mongodb://tuure:<tuure>@automaatio-shard-00-00.kic3u.mongodb.net:27017,automaatio-shard-00-01.kic3u.mongodb.net:27017,automaatio-shard-00-02.kic3u.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-hlbr5e-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, client_m) {
-        db = client_m.db('dbname'); // DB name
+    MongoClient.connect('mongodb://tuure:<tuure>@automaatio-shard-00-00.kic3u.mongodb.net:27017,automaatio-shard-00-01.kic3u.mongodb.net:27017,automaatio-shard-00-02.kic3u.mongodb.net:27017/<automaatio>?ssl=true&replicaSet=atlas-hlbr5e-shard-0&authSource=admin&retryWrites=true&w=majority', function(err, client_m) {
+        db = client_m.db('automaatio'); // DB name
 					if(err)
             throw err;
         console.log("connected to the mongoDB !");
-        myCollection = db.collection('dbname'); //Collection name
+        myCollection = db.collection('automaatio'); //Collection name
         onCreate();
 	    client_m.close();
     });
