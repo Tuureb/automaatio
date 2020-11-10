@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^3.6.2",
+    "mongodb": "^3.6.3",
     "mqtt": "^3.0.0"
   },
   "engines": {
@@ -22,5 +22,6 @@
     "url": "https://github.com/rerkki/automaatio/issues"
   },
   "homepage": "https://github.com/rerkki/automaatio#readme",
+  "devDependencies": {},
   "description": ""
 }
